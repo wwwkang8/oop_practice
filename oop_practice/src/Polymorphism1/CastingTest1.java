@@ -10,7 +10,7 @@ public class CastingTest1 {
 		car=fe;
 		//car.water()  조상클래스의 타입으로 자식클래스 메서드 참조 못함
 		fe2=(FireEngine) car;
-		fe2.water();
+		fe2.water(); 
 	}
 }
 
