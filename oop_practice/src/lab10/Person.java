@@ -9,7 +9,8 @@ public class Person {
 		this.phoneNumber = phoneNumber;
 	}
 	
+
 	public String toString(){
-		return "(<"+name+">"+", "+"<"+phoneNumber+">)";
+		return "("+name+", "+phoneNumber+")";
 	}
 }

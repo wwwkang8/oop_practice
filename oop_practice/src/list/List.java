@@ -21,9 +21,11 @@ public class List {
 		for(int count=0; count<list.size(); count++)
 			System.out.printf("%s ", list.get(count));
 		removeColors(list,removeList);
+
 		System.out.println("ArrayList: ");
 		for(int count=0; count<list.size(); count++)
 			System.out.printf("%s ", list.get(count));
+
 	}
 
 	private static void removeColors(ArrayList list, ArrayList removeList) {

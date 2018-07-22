@@ -11,6 +11,7 @@ public class PhoneBook {
 	//phoneBook constructor
 	public PhoneBook() {
 		super();
+		phoneBook=new HashMap<String, String>();
 	}
 	
 	public Boolean add(String name, String phoneNumber){
@@ -20,6 +21,13 @@ public class PhoneBook {
 			phoneBook.put(name, phoneNumber);
 			return true;
 		}
+		/*Boolean tf=phoneBook.containsKey(name);
+		if(tf!=null&&!tf){
+			phoneBook.put(name, phoneNumber);
+			return true;
+		}else{
+			return false;
+		}*/
 	}
 	
 	public Boolean delete(String name){
@@ -31,13 +39,15 @@ public class PhoneBook {
 		}
 	}
 	
-	public Set<Person> list(){
+	public HashSet<Person> list(){
 		HashSet<Person> personSet=new HashSet<Person>();
 		Set<String> keys=phoneBook.keySet();
 		Iterator it=keys.iterator();
 		while(it.hasNext()){
-		//	personSet.add(,it.next());
+			Person p=new Person((String)it.next(),phoneBook.get(it.next()));
+			personSet.add(p);	
 		}
+		return personSet;
 	}
 	
 }
